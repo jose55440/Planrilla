@@ -1,21 +1,33 @@
-// Atajos
-const { readFileSync } = require("fs");
+const posthtml = require('posthtml');
+const include = require('posthtml-include');
+const Swiper = require('swiper/swiper-bundle.min.js');
 
-const posthtml = require("posthtml");
-const include = require("posthtml-include");
+// Assuming index.html is in the same directory as your main.js
+const htmlPath = 'index.html';
 
-const html = readFileSync("index.html");
+// Fetch the HTML content asynchronously
+fetch(htmlPath)
+  .then((response) => response.text())
+  .then((html) => {
+    // Process HTML using posthtml and posthtml-include
+    return posthtml([include({ encoding: 'utf8' })])
+      .process(html);
+  })
+  .then((result) => {
+    // Log the processed HTML
+   
 
-posthtml([include({ encoding: "utf8" })])
-  .process(html)
-  .then((result) => console.log(result.html));
-
-  const swiper = new Swiper('.swiper-container', {
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    autoplay: {
-      delay: 2000, // Esto también configura el tiempo de reproducción automática
-    },
+    // Initialize Swiper after processing HTML
+    const swiper = new Swiper('.swiper', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      autoplay: {
+        delay: 5000, // 5000 milliseconds (5 seconds) - adjust as needed
+      },
+    });
+  })
+  .catch((error) => {
+    console.error('Error processing HTML:', error);
   });
