@@ -1,3 +1,6 @@
+body {
+  position: relative;
+}
 header h1 {
   display: flex;
   align-items: center;
@@ -17,10 +20,7 @@ header {
 }
 
 
-body {
-  position: relative;
-  height: 100%;
-}
+
 
 body {
   background: #eee;
@@ -29,6 +29,7 @@ body {
   color: #000;
   margin: 0;
   padding: 0;
+  
 }
 
 .swiper {
@@ -46,7 +47,7 @@ body {
 }
 
 .swiper-slide img {
-  display: block;
+  display: flex;
   width: 1000px;
   height: 700px;
   object-fit: cover;
@@ -57,9 +58,27 @@ body {
 
 footer {
   background-color: #000;
-  color: white;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  
+}
+footer ul{
+  display: inline-flex;
+  
+  align-items: center;
+  /* Center vertically */
+  justify-content: center;
+  /* Center horizontally */
+
+  margin: 2%;
+  list-style: none;
+
 }
 
-footer a {
-  color: white;
+footer li{
+  
+  margin: 10px;
+  
 }
+
