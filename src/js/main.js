@@ -25,6 +25,11 @@ const swiper = new Swiper(".swiper", {
   hideOnClick: false,
   lockClass: "swiper-button-lock",
   navigationDisabledClass: "swiper-navigation-disabled",
+  disableOnInteraction:true,
+  pauseOnMouseEnter:false,
+  reverseDirection:false,
+  stopOnLastSlide:false,
+  waitForTransition:true
 });
 document.querySelector("#next").addEventListener("click", function () {
   swiper.slideNext();
