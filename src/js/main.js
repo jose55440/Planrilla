@@ -32,3 +32,7 @@ document.querySelector("#next").addEventListener("click", function () {
 document.querySelector("#prev").addEventListener("click", function () {
   swiper.slidePrev();
 });
+
+
+
+
