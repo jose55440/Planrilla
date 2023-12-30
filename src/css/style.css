@@ -1,4 +1,4 @@
-html,
+
     body {
       position: relative;
       height: 100%;
@@ -47,4 +47,4 @@ html,
     header {
       background-color: black;
       margin: 0;
-    }
+    } 

@@ -13,21 +13,31 @@ fetch(htmlPath)
     return posthtml([include({ encoding: 'utf8' })])
       .process(html);
   })
-  .then((result) => {
-    // Log the processed HTML
-   
+  
 
-    // Initialize Swiper after processing HTML
-    const swiper = new Swiper('.swiper', {
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      autoplay: {
-        delay: 5000, // 5000 milliseconds (5 seconds) - adjust as needed
-      },
-    });
-  })
-  .catch((error) => {
-    console.error('Error processing HTML:', error);
+
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+
+  const swiper = new Swiper('.swiper', {
+    speed: 400,
+    spaceBetween: 100,
+    disabledClass:'swiper-button-disabled',
+    enabled: true,
+    hiddenClass:'swiper-button-hidden',
+    hideOnClick:false,
+    lockClass:	'swiper-button-lock',
+    navigationDisabledClass:'swiper-navigation-disabled',
+    nextEl:null,
+    prevEl:null
   });
+
+    
+    swiper.slideNext();
+    swiper.slideNext();
+    
+  
+  
+ 
+
+  
