@@ -1,6 +1,4 @@
-body {
-  position: relative;
-}
+
 header h1 {
   display: flex;
   align-items: center;
@@ -8,8 +6,11 @@ header h1 {
   justify-content: center;
   /* Center horizontally */
   color: white;
-  margin: 0;
-  padding: 40px;
+  
+  padding: 10px;
+
+
+  text-transform: uppercase;
 
 }
 
@@ -29,6 +30,9 @@ body {
   color: #000;
   margin: 0;
   padding: 0;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+  
   
 }
 
@@ -50,9 +54,13 @@ body {
   display: flex;
   width: 1000px;
   height: 700px;
+  
   object-fit: cover;
 }
 
+article{
+  margin-bottom: 15px;
+}
 
 
 
@@ -62,15 +70,17 @@ footer {
   display: flex;
   justify-content: center;
   
+  
+  
 }
 footer ul{
   display: inline-flex;
-  
+  padding: 0%;
   align-items: center;
   /* Center vertically */
   justify-content: center;
   /* Center horizontally */
-
+  
   margin: 2%;
   list-style: none;
 
